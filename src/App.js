@@ -3,10 +3,13 @@ import MovieList from "./pages/MovieList";
 import MovieDetail from "./pages/MovieDetail";
 import Search from "./pages/Search";
 import PageNotFound from "./pages/PageNotFound";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <>
+    <div>
+      <Header/>
       <Routes>
         {/* Routes go here */}
         <Route path="/" element={<MovieList/>}></Route>
@@ -17,7 +20,8 @@ function App() {
         <Route path="/search" element={<Search/>}></Route>
         <Route path="*" element={<PageNotFound/>}></Route>
       </Routes>
-    </>
+      <Footer/>
+    </div>
   );
 }
 
