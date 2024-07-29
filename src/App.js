@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import MovieList from "./pages/MovieList";
+import MovieDetail from "./pages/MovieDetail";
+import Search from "./pages/Search";
+import PageNotFound from "./pages/PageNotFound";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        {/* Routes go here */}
+        <Route path="/" element={<MovieList/>}></Route>
+        <Route path="/movie/:id" element={<MovieDetail/>}></Route> {/* For each movie, it show different detail by id property => useParams() */}
+        <Route path="/movies/popular" element={<MovieList/>}></Route>
+        <Route path="/movies/top" element={<MovieList/>}></Route>
+        <Route path="/movies/upcoming" element={<MovieList/>}></Route>
+        <Route path="/search" element={<Search/>}></Route>
+        <Route path="*" element={<PageNotFound/>}></Route>
+      </Routes>
+    </>
   );
 }
 
