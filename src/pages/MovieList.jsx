@@ -2,6 +2,7 @@ import MovieCard from '../components/MovieCard'
 import useFetchMovies from '../hooks/useFetchMovies';
 const MovieList = ({api_text}) => {
   const {movies} = useFetchMovies(api_text);
+  if (movies.length === 0) return;
   return (
     <main>
       <section className='max-w-7xl mx-auto py-7'>
