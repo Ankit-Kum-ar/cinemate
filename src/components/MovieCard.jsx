@@ -4,7 +4,6 @@ import { MOVIECARD_IMAGE_URL } from '../utils/constant'
 import backup from "../assets/backup.png"
 
 const MovieCard = ({id, title, overview, poster, name}) => {
-  console.log(name);
   return (
     <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-3">
               <Link to={`/movie/${id}`}>
