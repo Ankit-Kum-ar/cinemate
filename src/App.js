@@ -12,12 +12,13 @@ function App() {
       <Header/>
       <Routes>
         {/* Routes go here */}
-        <Route path="/" element={<MovieList/>}></Route>
+        <Route path="/" element={<MovieList api_text="movie/now_playing"/>}></Route>
         <Route path="/movie/:id" element={<MovieDetail/>}></Route> {/* For each movie, it show different detail by id property => useParams() */}
-        <Route path="/movies/popular" element={<MovieList/>}></Route>
-        <Route path="/movies/top" element={<MovieList/>}></Route>
-        <Route path="/movies/upcoming" element={<MovieList/>}></Route>
-        <Route path="/search" element={<Search/>}></Route>
+        <Route path="/movies/popular" element={<MovieList api_text="movie/popular"/>}></Route>
+        <Route path="/movies/top" element={<MovieList api_text="movie/top_rated"/>}></Route>
+        <Route path="/movies/upcoming" element={<MovieList api_text="movie/upcoming"/>}></Route>
+        <Route path="/shows" element={<MovieList api_text="tv/top_rated"/>}></Route>
+        <Route path="/search" element={<Search api_text="search/movie"/>}></Route>
         <Route path="*" element={<PageNotFound/>}></Route>
       </Routes>
       <Footer/>
