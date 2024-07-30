@@ -6,7 +6,7 @@ const MovieList = ({api_text}) => {
   return (
     <main>
       <section className='max-w-7xl mx-auto py-7'>
-        <div className='flex justify-start flex-wrap'>
+        <div className='flex justify-start flex-wrap other:justify-evenly'>
           {
             movies.map((movie) => (
               <MovieCard key={movie?.id} id={movie?.id} title={movie?.original_title} overview={movie?.overview} poster={movie?.poster_path} name={movie?.name}/>
