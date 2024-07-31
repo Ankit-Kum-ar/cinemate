@@ -2,6 +2,7 @@ import MovieCard from '../components/MovieCard'
 import useFetchMovies from '../hooks/useFetchMovies';
 const MovieList = ({api_text}) => {
   const {movies} = useFetchMovies(api_text);
+  console.log(movies);
   if (movies.length === 0) return;
   return (
     <main>
