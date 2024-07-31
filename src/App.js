@@ -6,10 +6,12 @@ import PageNotFound from "./pages/PageNotFound";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ShowDetail from "./pages/ShowDetail";
+import ScrollToTop from "./Helpers/ScrolltoTop";
 
 function App() {
   return (
     <div className="dark:bg-slate-800">
+      <ScrollToTop/>
       <Header/>
       <Routes>
         {/* Routes go here */}
