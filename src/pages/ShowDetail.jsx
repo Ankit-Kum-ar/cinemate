@@ -25,7 +25,7 @@ const ShowDetail = () => {
         </div>
         <div className='max-w-2xl text-gray-700 dark:text-white text-lg'>
           <h1 className='text-4xl font-bold my-3 text-center md:text-left'>{show.name}</h1>
-          <p className='my-4'>{show.overview}</p>
+          <p className='my-4 md:px-0 pl-1 pr-3'>{show.overview}</p>
           {
             show.genres && (
               <div className='my-9'>
